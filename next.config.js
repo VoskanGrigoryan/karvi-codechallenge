@@ -1,13 +1,22 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  //   images: {
-  //     remotePatterns: [
-  //       {
-  //         protocol: "",
-  //         hostname: "",
-  //       },
-  //     ],
-  //   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "spyne.s3.amazonaws.com",
+      },
+      {
+        protocol: "https",
+        hostname: "imagens-carros-seminovos-certificados.karvi.com.ar",
+      },
+      {
+        protocol: "https",
+        hostname: "d7mrzff3jg2ye.cloudfront.net",
+      },
+    ],
+  },
+
   webpack(config) {
     // Grab the existing rule that handles SVG imports
     const fileLoaderRule = config.module.rules.find((rule) =>
